@@ -1,0 +1,27 @@
+.ui.input {
+    width: 100%;
+}
+
+.ui.selection.dropdown {
+    width: 100%;
+}
+
+@media only screen and (min-device-width: 480px){   
+    .ui .row .column {
+        margin: 0 !important; 
+    }
+}
+
+.ui.fade-in {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

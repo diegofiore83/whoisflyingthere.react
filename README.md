@@ -1,2 +1,6 @@
-# whoisflyingthere.react
-Create a smart app to retrieve which company are serving a route between 2 cities in a specific date
+# easyhotel
+Quick interface in React Redux to show, filter and sort a big list of Hotel data
+
+To start: npm install and npm start
+
+Boilerplace: CreateReactApp + React Redux + Lodash
