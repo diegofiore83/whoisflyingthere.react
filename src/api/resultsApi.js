@@ -1,9 +1,10 @@
 import fetch from 'isomorphic-fetch';
+import { API_ROOT } from './api-config';
 
 class ResultsApi {
   static getResults(locale, currency, market, search) {
 
-    return fetch('http://localhost:80/api/search' +
+    return fetch(`${API_ROOT}/api/search` +
     '?fromPlace=' + search.fromPlace +
     '&toPlace=' + search.toPlace +
     '&fromDate=' + search.fromDate +
@@ -24,7 +25,7 @@ class ResultsApi {
 
   static getAutosuggests(locale, currency, market, query) {
     
-    return fetch('http://localhost:80/api/autosuggest' +
+    return fetch(`${API_ROOT}/api/autosuggest` +
     '?locale=' + locale +
     '&market=' + market +
     '&currency=' + currency +

@@ -100,6 +100,7 @@ class App extends Component {
         <Search/>
         <Results/>
         <ResolutionDetect />
+        <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
       </div>
     );
   }

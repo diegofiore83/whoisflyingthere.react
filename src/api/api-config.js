@@ -1,0 +1,1 @@
+export const API_ROOT = process.env.NODE_ENV === 'production' ? 'http://ec2-54-91-132-65.compute-1.amazonaws.com' : 'http://localhost:80' ;
