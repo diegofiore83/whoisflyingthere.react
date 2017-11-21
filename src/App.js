@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Results from './components/Results';
+import Search from './components/Search';
 import ResolutionDetect from './components/Shared/ResolutionDetect';
 
 import { Container, Dropdown } from 'semantic-ui-react';
@@ -33,15 +34,10 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { applicationActions, geoActions, resultActions, currency, locale, search } = this.props;
-
-    if (nextProps.locale !== locale || nextProps.currency !== currency) {
-      applicationActions.startLoading();
-      resultActions.loadResults(nextProps.locale, nextProps.currency, nextProps.market, search);
-      
-      if (nextProps.locale !== locale) {
-        geoActions.loadMarkets(nextProps.locale);
-      }
+    const { geoActions, locale } = this.props;
+  
+    if (nextProps.locale !== locale) {
+      geoActions.loadMarkets(nextProps.locale);
     }
   }
 
@@ -101,6 +97,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">WhoIsFlyingThere?</h1>
         </header>
+        <Search/>
         <Results/>
         <ResolutionDetect />
       </div>

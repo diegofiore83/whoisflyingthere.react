@@ -20,7 +20,11 @@ export default function applicationReducer(state = initialState.application, act
     case types.SET_MARKET:
       return Object.assign({}, state, { market: action.market });
     case types.SET_LOCATION_SUCCESS:
-      return Object.assign({}, state, { loading: action.location });
+      return Object.assign({}, state, { location: action.location });
+    case types.DEPARTURE_SUGGESTIONS_LOADED:
+      return Object.assign({}, state, { departureSuggestions: action.suggestions });
+    case types.ARRIVAL_SUGGESTIONS_LOADED:
+      return Object.assign({}, state, { arrivalSuggestions: action.suggestions });
     default:
       return state;
   }

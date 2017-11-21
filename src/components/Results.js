@@ -45,7 +45,7 @@ class Results extends React.Component {
     else {
       if (results.length > 0) {
         listItems = results.slice(0, currentState.elementToShow).map((result, i) =>
-          <Card fluid className="fade-in" key={i}>
+          <Card fluid className='fade-in' key={i}>
             <Segment>
               <Grid verticalAlign='middle'>
                 <Grid.Row>
@@ -78,9 +78,6 @@ class Results extends React.Component {
 
     return (
       <Container>
-        <Segment basic padded>
-            <div>Search</div>
-        </Segment>
         {loading}
         {noResults}
         <Card.Group>

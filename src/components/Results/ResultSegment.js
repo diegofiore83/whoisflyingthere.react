@@ -19,7 +19,7 @@ class ResultSegment extends React.Component {
             <Header size='medium'>
                 { moment(segment.DepartureDateTime).format('HH:mm') }
                 <Header.Subheader>
-                { segment.OriginPlace.Name } ({ segment.OriginPlace.Code })
+                    { segment.OriginPlace.Name } ({ segment.OriginPlace.Code })
                 </Header.Subheader>
             </Header>
             </Grid.Column>
@@ -27,7 +27,7 @@ class ResultSegment extends React.Component {
             <Header size='medium'>
                 { moment(segment.ArrivalDateTime).format('HH:mm') }
                 <Header.Subheader>
-                { segment.DestinationPlace.Name } ({ segment.DestinationPlace.Code })
+                    { segment.DestinationPlace.Name } ({ segment.DestinationPlace.Code })
                 </Header.Subheader>
             </Header>
             </Grid.Column>
@@ -46,9 +46,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ResultSegment);
+export default connect(mapStateToProps, null)(ResultSegment);

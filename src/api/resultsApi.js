@@ -21,6 +21,19 @@ class ResultsApi {
         return error;
     });
   }
+
+  static getAutosuggests(locale, currency, market, query) {
+    
+    return fetch('http://localhost:80/api/autosuggest' +
+    '?locale=' + locale +
+    '&market=' + market +
+    '&currency=' + currency +
+    '&query=' + query)
+      .then(response => response.json())
+      .catch(error => {
+        return error;
+    });
+  }
 }
 
 export default ResultsApi;

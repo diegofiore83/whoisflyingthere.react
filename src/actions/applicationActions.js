@@ -19,17 +19,14 @@ export function setGeoLocation() {
 }
 
 export function setCurrency(currency) {
-  console.log("currency", currency);
   return {type: types.SET_CURRENCY, currency};
 }
 
 export function setLocale(locale) {
-  console.log("locale", locale);
   return {type: types.SET_LOCALE, locale};
 }
 
 export function setMarket(market) {
-  console.log("market", market);
   return {type: types.SET_MARKET, market};
 }
 

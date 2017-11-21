@@ -1,0 +1,16 @@
+.ui.icon.input input {
+    border-radius: 4px;
+}
+
+.ui .results {
+    min-width: 300px;
+}
+
+.ui.search>.results .result {
+    text-align: left;
+}
+
+.ui.search>.results .result .image {
+    width: 30px;
+    height: 20px;
+}

@@ -32,16 +32,13 @@ export function loadMarkets(locale) {
 }
 
 export function currenciesLoadedSuccess(dispatch, currencies) {
-  console.log("currencies", currencies);
   return {type: types.CURRENCIES_LOADED, currencies};
 }
 
 export function localesLoadedSuccess(dispatch, locales) {
-  console.log("locales", locales);
   return {type: types.LOCALES_LOADED, locales};
 }
 
 export function marketsLoadedSuccess(dispatch, markets) {
-  console.log("markets", markets);
   return {type: types.MARKETS_LOADED, markets};
 }
