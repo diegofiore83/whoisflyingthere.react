@@ -9,7 +9,7 @@ export function setGeoLocation() {
       const locale = navigator.language.length === 2 ? navigator.language + '-' + navigator.language.toUpperCase() : navigator.language;
       dispatch(setLocale(locale));
 
-      const market = navigator.language.toUpperCase();
+      const market = navigator.language.length === 5 ? navigator.language.split('-')[1] : navigator.language.toUpperCase();
       dispatch(setMarket(market));
 
     }).catch(error => {
